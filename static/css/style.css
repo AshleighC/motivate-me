@@ -1,0 +1,17 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #12a6bd; }
+
+.large-input {
+  width: 84%;
+  margin: 0;
+  margin-top: 500px;
+  padding: 25px 8%;
+  background: none;
+  font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
+  outline: none;
+  border: none;
+  color: #d9effa; }
+  .large-input::-webkit-input-placeholder {
+    color: #d9effa; }
