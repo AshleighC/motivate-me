@@ -2,10 +2,27 @@
 <html>
   <head>
     <title>MotivateMe</title>
+    <link href="static/css/reset.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <script src="static/js/jquery-2.0.3.min.js"></script>
+    <script src="static/js/motivateme.js"></script>
+    <script src="static/js/putCursorAtEnd.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:500,400,300' rel='stylesheet' type='text/css'>
   </head>
-  <body>
-    {{ name }},<br>
-    {{ quote["quote"] }}<br>
-    - {{ quote["author"] }}
+  <body class="blue">
+    <ul class="colors">
+      <li class="active blue"></li>
+      <li class="green"></li>
+      <li class="gold"></li>
+      <li class="orange"></li>
+      <li class="pink"></li>
+      <li class="purple"></li>
+    </ul>
+
+    <div class="result">
+      <h2 class="name">{{ name }},</h2>
+      <h3 class="quote">{{ quote["quote"] }}</h3>
+      - {{ quote["author"] }}
+    </div>
   </body>
 </html>

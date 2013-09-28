@@ -12,9 +12,11 @@ $(document).ready(function() {
   });
 
   $('.colors li').on('click', function(evt) {
+    var newColor = $(this).attr('class');
     $('.colors .active').removeClass('active');
     $('body').removeClass();
-    $('body').addClass($(this).attr('class'));
+    $('body').addClass(newColor);
+    $('#color').val(newColor);
     $(this).addClass('active');
   });
 });

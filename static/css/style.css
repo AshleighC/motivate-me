@@ -44,10 +44,19 @@ body {
     .colors li:hover {
       cursor: pointer; }
 
+.result,
 .large-input,
 .helper-text {
   position: absolute;
   bottom: 60px; }
+
+.result {
+  padding: 25px 85px;
+  color: #ebebeb; }
+
+h2.name {
+  font-weight: 500;
+  font: 75px "Open Sans", "Helvetica", "Arial", sans-serif; }
 
 .large-input {
   width: 84%;
