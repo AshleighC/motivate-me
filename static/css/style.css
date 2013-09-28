@@ -7,7 +7,7 @@ body {
   width: 84%;
   margin: 0;
   margin-top: 500px;
-  padding: 25px 8%;
+  padding: 25px 85px;
   background: none;
   font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
   outline: none;
@@ -15,3 +15,10 @@ body {
   color: #d9effa; }
   .large-input::-webkit-input-placeholder {
     color: #d9effa; }
+
+.helper-text {
+  color: #d9effa;
+  display: none;
+  padding: 0 85px;
+  font: 300 22px "Open Sans", "Helvetica", "Arial", sans-serif;
+  letter-spacing: 0.1em; }
