@@ -9,7 +9,16 @@
     <script src="static/js/putCursorAtEnd.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <body class="blue">
+    <ul class="colors">
+      <li class="active blue"></li>
+      <li class="green"></li>
+      <li class="gold"></li>
+      <li class="orange"></li>
+      <li class="pink"></li>
+      <li class="purple"></li>
+    </ul>
+
     <form action="/name" method="post">
       <input type="text" name="name" class="large-input" id="name-input" value="Type your name..." maxLength="25"/>
       <h3 class="helper-text" id="name-helper-text">Press ENTER to submit</h3>

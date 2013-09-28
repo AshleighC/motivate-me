@@ -10,4 +10,11 @@ $(document).ready(function() {
       keyPressed = true;
     }
   });
+
+  $('.colors li').on('click', function(evt) {
+    $('.colors .active').removeClass('active');
+    $('body').removeClass();
+    $('body').addClass($(this).attr('class'));
+    $(this).addClass('active');
+  });
 });
