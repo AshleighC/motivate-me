@@ -22,8 +22,8 @@ body {
 
 .colors {
   position: absolute;
-  right: 25px;
-  top: 25px; }
+  right: 60px;
+  top: 60px; }
   .colors li {
     position: relative;
     width: 25px;
@@ -44,10 +44,14 @@ body {
     .colors li:hover {
       cursor: pointer; }
 
+.large-input,
+.helper-text {
+  position: absolute;
+  bottom: 60px; }
+
 .large-input {
   width: 84%;
   margin: 0;
-  margin-top: 500px;
   padding: 25px 85px;
   background: none;
   font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
