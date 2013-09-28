@@ -1,17 +1,69 @@
 body {
   padding: 0;
-  margin: 0;
+  margin: 0; }
+
+.blue {
   background: #12a6bd; }
+
+.green {
+  background: #b4bb6f; }
+
+.gold {
+  background: #e2c558; }
+
+.orange {
+  background: #df924a; }
+
+.pink {
+  background: #b78198; }
+
+.purple {
+  background: #9b5a9d; }
+
+.colors {
+  position: absolute;
+  right: 60px;
+  top: 60px; }
+  .colors li {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+    list-style: none;
+    border: 1px solid #ebebeb; }
+    .colors li:hover:before, .colors li.active:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 4px;
+      left: -18px;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid #ebebeb; }
+    .colors li:hover {
+      cursor: pointer; }
+
+.large-input,
+.helper-text {
+  position: absolute;
+  bottom: 60px; }
 
 .large-input {
   width: 84%;
   margin: 0;
-  margin-top: 500px;
-  padding: 25px 8%;
+  padding: 25px 85px;
   background: none;
   font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
   outline: none;
   border: none;
-  color: #d9effa; }
+  color: #ebebeb; }
   .large-input::-webkit-input-placeholder {
-    color: #d9effa; }
+    color: #ebebeb; }
+
+.helper-text {
+  color: #ebebeb;
+  display: none;
+  padding: 0 85px;
+  font: 300 22px "Open Sans", "Helvetica", "Arial", sans-serif;
+  letter-spacing: 0.1em; }
