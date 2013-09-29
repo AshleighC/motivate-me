@@ -5,6 +5,8 @@ from urllib import urlopen
 
 def get_quote_details(text):
   index = text.rfind(u"–")
+  if (index == -1):
+    index = text.rfind(u"-")
   return {"quote": text[:index - 1], "author": text[index + 1:]}
 
 def get_quotes():
