@@ -1,13 +1,19 @@
 $(document).ready(function() {
   var keyPressed = false;
-  $('#name-input').putCursorAtEnd();
+  var bodyColor = $('body').attr('class');
+
+  $('.large-input').putCursorAtEnd();
+  $('.colors .' + bodyColor).addClass('active');
 
   $(document).keypress(function(evt) {
     if (keyPressed == false) {
-      $('#name-input').val('');
-      $('#name-input').focus();
+      $('.large-input').val('');
+      $('.large-input').focus();
       $('#name-helper-text').show();
       keyPressed = true;
+    }
+    if (evt.keyCode == 32) {
+      location.reload(false);
     }
   });
 
