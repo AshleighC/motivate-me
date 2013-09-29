@@ -10,10 +10,9 @@ def index():
   if request.method == "GET":
     return render_template("index.html")
   else:
-    # TESTING THINGS... IGNORE UGLY CODE
-    #name = request.form["name"]
-    #color = request.form["color"]
-    quote = get_random_quote(request.form["task"])
-    return dumps(quote)
-    #return render_template("quote.html", color=color, name=name, quote=quote)
+    color = request.form["color"]
+    name = request.form["name"]
+    task = request.form["task"]
+    quote = get_random_quote(task)
+    return render_template("quote.html", color=color, name=name, task=task, quote=quote)
 
