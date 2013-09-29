@@ -85,6 +85,10 @@ q {
   .large-input::-webkit-input-placeholder {
     color: #ebebeb; }
 
+#task-helper-text,
+#task-input {
+  display: none; }
+
 .helper-text {
   color: #ebebeb;
   display: none;

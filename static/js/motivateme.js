@@ -1,19 +1,41 @@
 $(document).ready(function() {
-  var keyPressed = false;
-  var bodyColor = $('body').attr('class');
+  var keyPressed = false,
+      nameEntered = false,
+      bodyColor = $('body').attr('class');
 
-  $('.large-input').putCursorAtEnd();
+  // Puts cursor at end of input
+  $('#name-input').putCursorAtEnd();
+
+  // Changes background color
   $('.colors .' + bodyColor).addClass('active');
 
   $(document).keypress(function(evt) {
+    var code = (evt.keyCode ? evt.keyCode : evt.which);
+
     if (keyPressed == false) {
-      $('.large-input').val('');
-      $('.large-input').focus();
-      $('#name-helper-text').show();
+      if (nameEntered == false) {
+        $('#name-input').val('');
+        $('#name-input').focus();
+        $('#name-helper-text').show();
+      }
+      if (nameEntered == true) {
+        $('#task-input').val('');
+        $('#task-input').focus();
+        $('#task-helper-text').show();
+      }
       keyPressed = true;
     }
-    if (evt.keyCode == 32) {
-      location.reload(false);
+
+    if ((code == 13) && (nameEntered == false)) {
+      evt.preventDefault();
+      nameEntered = true;
+      keyPressed = false;
+      $('#name-input, #name-helper-text').hide();
+      $('#task-input').val('What do you need to do?');
+      $('#task-input').show();
+      $('#task-input').putCursorAtEnd();
+    } else if (evt.keyCode == 13) {
+      $('form').submit();
     }
   });
 
