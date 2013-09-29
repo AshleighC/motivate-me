@@ -4,14 +4,11 @@
     <title>MotivateMe</title>
     <link href="static/css/reset.css" rel="stylesheet">
     <link href="static/css/style.css" rel="stylesheet">
-    <script src="static/js/jquery-2.0.3.min.js"></script>
-    <script src="static/js/motivateme.js"></script>
-    <script src="static/js/putCursorAtEnd.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,500,400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   </head>
   <body class="{{ color }}">
     <ul class="colors">
-      <li class="active blue"></li>
+      <li class="blue"></li>
       <li class="green"></li>
       <li class="gold"></li>
       <li class="orange"></li>
@@ -22,7 +19,11 @@
     <div class="result">
       <h2 class="name">{{ name }},</h2>
       <q>{{ quote["quote"] }}</q>
-      - {{ quote["author"] }}
+      <h3 class="author">- {{ quote["author"] }}</h3>
     </div>
+    
+    <script src="static/js/jquery-2.0.3.min.js"></script>
+    <script src="static/js/motivateme.js"></script>
+    <script src="static/js/putCursorAtEnd.js"></script>
   </body>
 </html>
