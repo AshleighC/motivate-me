@@ -78,6 +78,7 @@ q {
   padding: 25px 85px;
   background: none;
   font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
   outline: none;
   border: none;
   color: #ebebeb; }
