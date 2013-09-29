@@ -10,6 +10,7 @@ def index():
     return render_template("index.html")
   else:
     name = request.form["name"]
+    color = request.form["color"]
     quote = get_random_quote()
-    return render_template("quote.html", name=name, quote=quote)
+    return render_template("quote.html", color=color, name=name, quote=quote)
 
