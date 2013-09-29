@@ -43,9 +43,9 @@ $(document).ready(function() {
     }
 
     if (code === 32) {
-      console.log('yo');
+      // console.log('yo');
       // $.post("/");
-      $('form').submit();
+      // $('form').submit();
     }
   });
 
