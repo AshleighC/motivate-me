@@ -1,3 +1,5 @@
+var currentData;
+
 $(document).ready(function() {
   var keyPressed = false,
       nameEntered = false,
@@ -35,17 +37,35 @@ $(document).ready(function() {
         $('#task-input').val('What do you need to do?');
         $('#task-input').show();
         $('#task-input').putCursorAtEnd();
-      } else if ($('form').length == 0) {
+      } else if ($('#questions').length == 0) {
         location.reload(true);
       } else {
-        $('form').submit();
+        $('#questions').submit();
+        var text_name = $('#name-input').val(),
+            text_task = $('#task-input').val(),
+            my_data = {'name': text_name, 'task' : text_task};
+
+        my_data = JSON.stringify(my_data);
+        $.ajax({
+          url: '/',
+          'type': 'POST',
+          data: my_data,
+          success: function(data) {
+            console.log('hi');
+            currentData = $.parseJSON(data);
+          }
+        });
       }
     }
 
     if (code === 32) {
-      // console.log('yo');
-      // $.post("/");
-      // $('form').submit();
+      if ($('#questions').length === 0) {
+        $.ajax({
+          url: '/',
+          'type': 'POST',
+          data: {'name': 'hi', 'task': 'more'}
+        });
+      }
     }
   });
 
