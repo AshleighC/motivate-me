@@ -58,6 +58,11 @@ h2.name {
   font-weight: 500;
   font: 75px "Open Sans", "Helvetica", "Arial", sans-serif; }
 
+q {
+  font: 45px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 60px; }
+
 .large-input {
   width: 84%;
   margin: 0;
