@@ -71,6 +71,7 @@ $(document).ready(function() {
 
   $('.colors li').on('click', function(evt) {
     var newColor = $(this).attr('class');
+    $('#favicon').attr('href', 'static/img/' + newColor + '.ico');
     $('.colors .active').removeClass('active');
     $('body').removeClass();
     $('body').addClass(newColor);
