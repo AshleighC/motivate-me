@@ -24,6 +24,6 @@ def render_index(index=""):
 
 def render_quote(form, index=None):
   return render_template("quote.html",
-      color=form["color"], name=form["name"], task=form["task"],
+      color=form["color"], name=form["name"].title(), task=form["task"],
       quote=get_quote(form["task"], index))
 
