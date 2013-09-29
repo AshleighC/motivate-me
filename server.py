@@ -11,6 +11,6 @@ def index():
   else:
     name = request.form["name"]
     color = request.form["color"]
-    quote = get_random_quote()
+    quote = get_random_quote(request.form["task"])
     return render_template("quote.html", color=color, name=name, quote=quote)
 
