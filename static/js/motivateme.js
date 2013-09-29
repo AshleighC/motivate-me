@@ -13,12 +13,12 @@ $(document).ready(function() {
     var code = (evt.keyCode ? evt.keyCode : evt.which);
 
     if (keyPressed == false) {
-      if (nameEntered == false) {
+      if (nameEntered === false) {
         $('#name-input').val('');
         $('#name-input').focus();
         $('#name-helper-text').show();
       }
-      if (nameEntered == true) {
+      if (nameEntered === true) {
         $('#task-input').val('');
         $('#task-input').focus();
         $('#task-helper-text').show();
@@ -26,15 +26,25 @@ $(document).ready(function() {
       keyPressed = true;
     }
 
-    if ((code == 13) && (nameEntered == false)) {
-      evt.preventDefault();
-      nameEntered = true;
-      keyPressed = false;
-      $('#name-input, #name-helper-text').hide();
-      $('#task-input').val('What do you need to do?');
-      $('#task-input').show();
-      $('#task-input').putCursorAtEnd();
-    } else if (evt.keyCode == 13) {
+    if (code === 13) {
+      if (nameEntered === false) {
+        evt.preventDefault();
+        nameEntered = true;
+        keyPressed = false;
+        $('#name-input, #name-helper-text').hide();
+        $('#task-input').val('What do you need to do?');
+        $('#task-input').show();
+        $('#task-input').putCursorAtEnd();
+      } else if ($('form').length == 0) {
+        location.reload(true);
+      } else {
+        $('form').submit();
+      }
+    }
+
+    if (code === 32) {
+      console.log('yo');
+      // $.post("/");
       $('form').submit();
     }
   });
