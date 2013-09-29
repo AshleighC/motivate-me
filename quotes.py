@@ -26,6 +26,16 @@ def read_json(path):
   f.close()
   return data
 
+def index_valid(index, max_index):
+  try:
+    index = int(index)
+    return (index >= 0) and (index <= max_index)
+  except:
+    return False
+
+def random_index(max_index):
+  return randint(0, max_index)
+
 def format_regex(word):
   regex = compile("\\b%ss?\\b" % word)
   return regex
@@ -38,9 +48,10 @@ def replace_words(quote, words, task):
     quote = sub(format_regex(word), correct_case(word, task), quote)
   return quote
 
-def get_random_quote(task):
+def get_quote(task, index):
   quotes = read_json("data/quotes.json")
-  index = randint(0, len(quotes) - 1)
+  max_index = len(quotes) - 1
+  index = int(index) if index_valid(index, max_index) else random_index(max_index)
   words = read_json("data/words.json")[index]
   quote = quotes[index]
   quote["quote"] = replace_words(quote["quote"], words, task)
