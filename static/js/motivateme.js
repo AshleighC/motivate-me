@@ -42,9 +42,10 @@ $(document).ready(function() {
           location.reload();
         }
         $('#questions').submit();
-        var text_name = $('#name-input').val(),
-            text_task = $('#task-input').val(),
-            my_data = {'name': text_name, 'task' : text_task};
+        var post_name = $('#name-input').val(),
+            post_task = $('#task-input').val(),
+            post_color = $('#color-input').val(),
+            my_data = {'name': post_name, 'task' : post_task, 'color': post_color};
 
         my_data = JSON.stringify(my_data);
         $.ajax({
@@ -52,7 +53,6 @@ $(document).ready(function() {
           'type': 'POST',
           data: my_data,
           success: function(data) {
-            console.log('hi');
             currentData = $.parseJSON(data);
           }
         });
