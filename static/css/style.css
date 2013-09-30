@@ -21,6 +21,7 @@ body {
   background: #9b5a9d; }
 
 .colors {
+  z-index: 1;
   position: absolute;
   right: 60px;
   top: 60px; }
