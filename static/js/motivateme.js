@@ -13,7 +13,6 @@ $(document).ready(function() {
 
   $(document).keypress(function(evt) {
     var code = (evt.keyCode ? evt.keyCode : evt.which);
-
     if (keyPressed == false) {
       if (nameEntered === false) {
         $('#name-input').val('');
@@ -29,10 +28,10 @@ $(document).ready(function() {
     }
 
     if (code === 13) {
-      if ($('#questions').length == 0) {
-        location.reload();
-      }
-      if (nameEntered === false) {
+      if ($('#questions').length === 0) {
+        console.log('here');
+        location.href = '/';
+      } else if (nameEntered === false) {
         evt.preventDefault();
         nameEntered = true;
         keyPressed = false;
@@ -72,7 +71,7 @@ $(document).ready(function() {
 
   $('.colors li').on('click', function(evt) {
     var newColor = $(this).attr('class');
-    $('#favicon').attr('href', 'static/img/' + newColor + '.ico');
+    $('#favicon').attr('href', '/static/img/' + newColor + '.ico');
     $('.colors .active').removeClass('active');
     $('body').removeClass();
     $('body').addClass(newColor);
