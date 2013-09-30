@@ -2,6 +2,18 @@ body {
   padding: 0;
   margin: 0; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+q,
+input {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300; }
+
 .blue {
   background: #12a6bd; }
 
@@ -54,38 +66,32 @@ body {
 .result {
   padding: 25px 85px;
   color: #ebebeb; }
-
-h2.name {
-  font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
-  font-weight: 300; }
-
-h3.author {
-  font: 20px "Open Sans", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
-  text-align: right;
-  margin-top: 15px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-right: 40px; }
-
-q {
-  font: 45px "Open Sans", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
-  line-height: 60px; }
+  .result .name {
+    font-size: 75px; }
+  .result q {
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 60px; }
+  .result .author {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 15px 40px 0 0; }
 
 .large-input {
   width: 84%;
   margin: 0;
   padding: 25px 85px;
   background: none;
-  font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
+  font-size: 75px;
+  color: #ebebeb;
   outline: none;
-  border: none;
-  color: #ebebeb; }
+  border: none; }
   .large-input::-webkit-input-placeholder {
     color: #ebebeb; }
 
+.helper-text,
 #task-input {
   display: none; }
 
@@ -95,7 +101,6 @@ q {
 
 .helper-text {
   color: #ebebeb;
-  display: none;
   padding: 0 85px;
-  font: 300 22px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-size: 22px;
   letter-spacing: 0.1em; }
