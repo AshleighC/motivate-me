@@ -37,9 +37,10 @@ $(document).ready(function() {
         $('#task-input').val('What do you need to do?');
         $('#task-input').show();
         $('#task-input').putCursorAtEnd();
-      } else if ($('#questions').length == 0) {
-        location.reload(true);
       } else {
+        if ($('#questions').length == 0) {
+          location.reload();
+        }
         $('#questions').submit();
         var text_name = $('#name-input').val(),
             text_task = $('#task-input').val(),

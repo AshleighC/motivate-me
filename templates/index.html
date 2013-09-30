@@ -1,36 +1,11 @@
-<!doctype html>
-<html>
-  <head>
-    <title>MotivateMe</title>
-    <link href="static/css/reset.css" rel="stylesheet">
-    <link href="static/css/style.css" rel="stylesheet">
-    <script src="static/js/jquery-2.0.3.min.js"></script>
-    <script src="static/js/motivateme.js"></script>
-    <script src="static/js/putCursorAtEnd.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link href="static/img/blue.ico" rel="shortcut icon" id="favicon">
-  </head>
-  <body class="blue">
-    <ul class="colors">
-      <li class="active blue"></li>
-      <li class="green"></li>
-      <li class="gold"></li>
-      <li class="orange"></li>
-      <li class="pink"></li>
-      <li class="purple"></li>
-    </ul>
+{% extends "base.html" %}
 
-    <form action="{{ action }}" method="post" id="questions">
-      <input type="text" name="name" class="large-input" id="name-input" value="Type your name..." maxLength="25" autocomplete="off"/>
-
-      <input type="text" name="task" class="large-input" id="task-input" value="What do you need to do?" maxLength="30" autocomplete="off"/>
-
-      <input type="hidden" value="blue" id="color" name="color"/>
-
-      <h3 class="helper-text" id="name-helper-text">Press ENTER to submit</h3>
-
-      <h3 class="helper-text" id="task-helper-text">Press ENTER for motivation</h3>
-    </form>
-
-  </body>
-</html>
+{% block content %}
+<form action="{{ action }}" method="post" id="questions">
+  <input type="text" name="name" class="large-input" id="name-input" value="Type your name..." maxLength="25" autocomplete="off"/>
+  <input type="text" name="task" class="large-input" id="task-input" value="What do you need to do?" maxLength="30" autocomplete="off"/>
+  <input type="hidden" value="blue" id="color" name="color"/>
+  <h3 class="helper-text" id="name-helper-text">Press ENTER to submit</h3>
+  <h3 class="helper-text" id="task-helper-text">Press ENTER for motivation</h3>
+</form>
+{% endblock %}

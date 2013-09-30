@@ -1,30 +1,131 @@
 // Define Colors
 $blue: #12a6bd;
-$green: #b4bb6f;
-$gold: #ffce20;
-$orange: #d9a97c;
-$pink: #b78198;
+$green: #88ae60;
+$gold: #e2c558;
+$orange: #df924a;
+$pink: #c54f7d;
 $purple: #9b5a9d;
 
-$blue-accent: #d9effa; 
+$blue-accent: #ebebeb; 
 
 body {
   padding: 0;
   margin: 0;
+}
+
+.blue {
   background: $blue;
+}
+.green {
+  background: $green;
+}
+.gold {
+  background: $gold;
+}
+.orange {
+  background: $orange;
+}
+.pink {
+  background: $pink;
+}
+.purple {
+  background: $purple;
+}
+
+.colors {
+  z-index: 1;
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  li {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 12px;
+    list-style: none;
+    border: 1px solid $blue-accent;
+
+    &:hover,
+    &.active {
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 4px;
+        left: -18px;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid $blue-accent;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.result,
+.large-input,
+.helper-text {
+  position: absolute;
+  bottom: 60px;
+}
+
+.result {
+  padding: 25px 85px;
+  color: $blue-accent;
+}
+
+h2.name {
+  font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+}
+
+h3.author {
+  font: 20px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  text-align: right;
+  margin-top: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-right: 40px;
+}
+
+q {
+  font: 45px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 60px;
 }
 
 .large-input {
   width: 84%;
   margin: 0;
-  margin-top: 500px;
-  padding: 25px 8%;
+  padding: 25px 85px;
   background: none;
   font: 75px "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
   outline: none;
   border: none;
   color: $blue-accent;
   &::-webkit-input-placeholder {
     color: $blue-accent;
   }
+}
+
+#task-input {
+  display: none;
+}
+
+.helper-text.display {
+  display: block;
+  opacity: 0.75;
+}
+
+.helper-text {
+  color: $blue-accent;
+  display: none;
+  padding: 0 85px;
+  font: 300 22px "Open Sans", "Helvetica", "Arial", sans-serif;
+  letter-spacing: 0.1em;
 }
