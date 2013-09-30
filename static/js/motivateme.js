@@ -29,6 +29,9 @@ $(document).ready(function() {
     }
 
     if (code === 13) {
+      if ($('#questions').length == 0) {
+        location.reload();
+      }
       if (nameEntered === false) {
         evt.preventDefault();
         nameEntered = true;
@@ -38,9 +41,6 @@ $(document).ready(function() {
         $('#task-input').show();
         $('#task-input').putCursorAtEnd();
       } else {
-        if ($('#questions').length == 0) {
-          location.reload();
-        }
         $('#questions').submit();
         var post_name = $('#name-input').val(),
             post_task = $('#task-input').val(),
