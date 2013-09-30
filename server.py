@@ -5,9 +5,18 @@ app = Flask(__name__)
 app.debug = True
 
 @app.route("/", methods=["GET", "POST"])
-def show_index():
+def index():
   if request.method == "GET":
     return render_index()
+  else:
+    return render_quote(request.form)
+
+""" NEW STUFF, NOT DONE YET """
+@app.route("/quote/", methods=["GET", "POST"])
+def quote():
+  if request.method == "GET":
+    # TODO(ashleigh): Check for query string parameters
+    pass
   else:
     return render_quote(request.form)
 
@@ -19,7 +28,7 @@ def show_quote(index):
     return render_quote(request.form, index)
 
 def render_index(index=""):
-  action = "/%s" % index
+  action = "/quote/%s" % index
   return render_template("index.html", action=action)
 
 def render_quote(form, index=None):
