@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MotivateMe</title>
+    <link href="static/css/reset.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href="static/img/blue.ico" rel="shortcut icon" id="favicon">
+  </head>
+  <body class="blue">
+    <ul class="colors">
+      <li class="active blue"></li>
+      <li class="green"></li>
+      <li class="gold"></li>
+      <li class="orange"></li>
+      <li class="pink"></li>
+      <li class="purple"></li>
+    </ul>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="static/js/jquery-2.0.3.min.js"></script>
+    <script src="static/js/motivateme.js"></script>
+    <script src="static/js/putCursorAtEnd.js"></script>
+  </body>
+</html>
